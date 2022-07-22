@@ -1,0 +1,46 @@
+import math
+
+
+def factorial(n):
+    """Computes factorial of n recursively."""
+    #Base case for 1! which is 1.
+    if n == 0:
+        return 1
+    else:
+        #code that calculates n! recursively
+        recurse = factorial(n-1)
+        result = n * recurse
+        return result
+
+
+def estimate_pi():
+    """Computes an estimate of pi.
+    Algorithm due to Srinivasa Ramanujan, from 
+    http://en.wikipedia.org/wiki/Pi
+    """
+    #Sets counter and k variables to zero
+    total = 0
+    k = 0
+    #Factor multiiplies the rest of the equation
+    factor = 2 * math.sqrt(2) / 9801
+    #Summation is done using an infinite while loop 
+    #Summation is from k to infinity
+    while True:
+        # numerator and denominator calculated for k and stored in num and den
+        num = factorial(4*k) * (1103 + 26390*k)
+        den = factorial(k)**4 * 396**(4*k)
+        
+        #total is updated
+        total += num / den
+        # term calculated for value of k
+        term = factor * num/den
+        
+        # sets the limit for when to break out of infinite while loop
+        if abs(term) < 1e-15:
+            break
+        # increment in k
+        k += 1
+    # return final result
+    return 1 / (factor * total)
+
+print(estimate_pi())
