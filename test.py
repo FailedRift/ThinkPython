@@ -1,13 +1,9 @@
-def do_twice(f, val):
-    f(val)
-    f(val)
+def histogram(s):
+    d = dict()
+    for c in s:
+        b = d.get(c , 0)
+        b += 1
+        d[c] = b
+    return d
 
-def print_twice(bruce):
-    print(bruce)
-    print(bruce)
-
-def do_four(f, val):
-    do_twice(f, val)
-    do_twice(f, val)
-
-do_four(print_twice, "spam")
+print(histogram('mississippi'))

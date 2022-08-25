@@ -1,0 +1,3 @@
+The quick brown fox
+jumps over the lazy dog
+And he doesn't have a right to do so. 
