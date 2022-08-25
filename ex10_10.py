@@ -1,3 +1,5 @@
+import bisect
+
 def make_word_list():
     """Reads line from a file and makes a list using the append method.
     
@@ -27,3 +29,12 @@ def in_bisect(word_list, word):
         return in_bisect(word_list[:i], word)
     else:
         return in_bisect(word_list[i:], word)
+    
+def in_bisect_cheat(word_list, word):
+    """Uses the bisection search module"""
+
+    i= bisect.bisect_left(word_list, word)
+    if i == len(word_list):
+        return False
+    
+    return word_list[i] == word
