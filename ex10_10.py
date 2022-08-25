@@ -42,8 +42,8 @@ def in_bisect_cheat(word_list, word):
 
 word_list = make_word_list()
 
-for word in ['alien', 'altitude', 'bottle', 'cumbersome', 'drink', 'fuck', 'quirk', 'troll', 'zola']:
-    print(word, 'in list', in_bisect(word_list, word))
+ #for word in ['alien', 'altitude', 'bottle', 'cumbersome', 'drink', 'fuck', 'quirk', 'troll', 'zola']:
+    #print(word, 'in list', in_bisect(word_list, word))
 
 for word in ['alien', 'altitude', 'bottle', 'cumbersome', 'drink', 'fuck', 'quirk', 'troll', 'zola']:
     print(word, 'in list', in_bisect_cheat(word_list, word))
